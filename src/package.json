@@ -28,7 +28,7 @@
     "watch:elm": "chokidar '**/*.elm' -c 'elm make Main.elm --output ../build/index.js' --initial",
     "watch:css": "cssnext --watch index.css ../build/index.css --verbose",
     "watch": "npm run build ; npm run watch:elm & npm run watch:css",
-    "start": "ttab -G npm run watch ; browser-sync start --files '../build/*.css, ../build/*.js' --server"
+    "start": "ttab -G npm run watch ; cd .. && browser-sync start --files '../build/*.css, ../build/*.js' --server"
   },
   "private": true
 }
